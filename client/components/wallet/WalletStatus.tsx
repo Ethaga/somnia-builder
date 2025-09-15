@@ -1,5 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { useAccount, useBalance, useConnect, useDisconnect, useSwitchChain } from "wagmi";
+import {
+  useAccount,
+  useBalance,
+  useConnect,
+  useDisconnect,
+  useSwitchChain,
+} from "wagmi";
 import { somniaShannonTestnet } from "@/lib/somnia";
 import { useMemo } from "react";
 
@@ -29,7 +35,7 @@ export function WalletStatus() {
     const connector = connectors?.[0];
     return (
       <Button
-        onClick={() => connector ? connect({ connector }) : undefined}
+        onClick={() => (connector ? connect({ connector }) : undefined)}
         variant="default"
         size="sm"
         aria-busy={isConnecting}
@@ -55,7 +61,9 @@ export function WalletStatus() {
   return (
     <div className="flex items-center gap-2">
       <span className="text-xs text-muted-foreground hidden sm:inline">
-        {balance ? `${parseFloat(balance.formatted).toFixed(4)} ${balance.symbol}` : ""}
+        {balance
+          ? `${parseFloat(balance.formatted).toFixed(4)} ${balance.symbol}`
+          : ""}
       </span>
       <Button variant="outline" size="sm" onClick={() => disconnect()}>
         {label}

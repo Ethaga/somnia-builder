@@ -1,4 +1,9 @@
-import { SOMNIA_DOCS_URL, SOMNIA_EXPLORER_URL, SOMNIA_FAUCET_URL, SOMNIA_NETWORK_INFO_URL } from "@/lib/somnia";
+import {
+  SOMNIA_DOCS_URL,
+  SOMNIA_EXPLORER_URL,
+  SOMNIA_FAUCET_URL,
+  SOMNIA_NETWORK_INFO_URL,
+} from "@/lib/somnia";
 import SendSTTForm from "@/components/SendSTTForm";
 import ERC20Tools from "@/components/ERC20Tools";
 import NFTTools from "@/components/NFTTools";
@@ -20,20 +25,43 @@ export default function Index() {
               Build on Somnia
             </h1>
             <p className="mt-5 text-lg text-muted-foreground">
-              Build DeFi protocols, NFT utilities or developer tooling that run entirely on Somnia. This production-ready dApp connects to the Somnia Shannon Testnet and lets you transact, inspect ERC-20 tokens, and explore NFTs.
+              Build DeFi protocols, NFT utilities or developer tooling that run
+              entirely on Somnia. This production-ready dApp connects to the
+              Somnia Shannon Testnet and lets you transact, inspect ERC-20
+              tokens, and explore NFTs.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Button asChild>
-                <a href={SOMNIA_FAUCET_URL} target="_blank" rel="noreferrer">Get STT from Faucet</a>
+                <a href={SOMNIA_FAUCET_URL} target="_blank" rel="noreferrer">
+                  Get STT from Faucet
+                </a>
               </Button>
               <Button asChild variant="outline">
-                <a href={SOMNIA_DOCS_URL} target="_blank" rel="noreferrer">Read Somnia Docs</a>
+                <a href={SOMNIA_DOCS_URL} target="_blank" rel="noreferrer">
+                  Read Somnia Docs
+                </a>
               </Button>
               <Button asChild variant="ghost">
-                <a href={SOMNIA_NETWORK_INFO_URL} target="_blank" rel="noreferrer">Network Info</a>
+                <a
+                  href={SOMNIA_NETWORK_INFO_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Network Info
+                </a>
               </Button>
             </div>
-            <div className="mt-4 text-sm text-muted-foreground">Shannon Testnet • Chain ID 50312 • Explorer: <a className="underline" href={SOMNIA_EXPLORER_URL} target="_blank" rel="noreferrer">shannon-explorer.somnia.network</a></div>
+            <div className="mt-4 text-sm text-muted-foreground">
+              Shannon Testnet • Chain ID 50312 • Explorer:{" "}
+              <a
+                className="underline"
+                href={SOMNIA_EXPLORER_URL}
+                target="_blank"
+                rel="noreferrer"
+              >
+                shannon-explorer.somnia.network
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -49,11 +77,27 @@ export default function Index() {
         <div className="w-full rounded-xl border bg-card p-6 shadow-sm">
           <h3 className="text-lg font-semibold mb-2">Contract Addresses</h3>
           <p className="text-sm text-muted-foreground">
-            This toolkit dApp does not deploy custom contracts. It interacts directly with the Somnia network and any token/NFT contracts you provide. If you have your own contracts, list them here and use the tools above to interact with them.
+            This toolkit dApp does not deploy custom contracts. It interacts
+            directly with the Somnia network and any token/NFT contracts you
+            provide. If you have your own contracts, list them here and use the
+            tools above to interact with them.
           </p>
           <ul className="mt-4 text-sm list-disc pl-5 space-y-2">
-            <li>Somnia Shannon Testnet Explorer: <a className="underline" href={SOMNIA_EXPLORER_URL} target="_blank" rel="noreferrer">{SOMNIA_EXPLORER_URL}</a></li>
-            <li>RPC Endpoints: somnia.publicnode.com, dream-rpc.somnia.network, somnia-json-rpc.stakely.io</li>
+            <li>
+              Somnia Shannon Testnet Explorer:{" "}
+              <a
+                className="underline"
+                href={SOMNIA_EXPLORER_URL}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {SOMNIA_EXPLORER_URL}
+              </a>
+            </li>
+            <li>
+              RPC Endpoints: somnia.publicnode.com, dream-rpc.somnia.network,
+              somnia-json-rpc.stakely.io
+            </li>
           </ul>
         </div>
       </section>
@@ -62,10 +106,22 @@ export default function Index() {
         <div className="rounded-xl border p-6 bg-gradient-to-br from-indigo-500/10 to-fuchsia-500/10">
           <h3 className="text-lg font-semibold">Judging Criteria Coverage</h3>
           <ul className="mt-3 grid gap-2 text-sm md:grid-cols-2">
-            <li>• Original: On-chain toolkit enabling DeFi/NFT/dev flows without a backend.</li>
-            <li>• Deployed on Somnia: Connects to Shannon Testnet with live reads/writes.</li>
-            <li>• User-friendly: Clean UI, wallet-aware flows, explorer links, faucet CTA.</li>
-            <li>• On-chain: All actions execute on-chain via JSON-RPC; no server state.</li>
+            <li>
+              • Original: On-chain toolkit enabling DeFi/NFT/dev flows without a
+              backend.
+            </li>
+            <li>
+              • Deployed on Somnia: Connects to Shannon Testnet with live
+              reads/writes.
+            </li>
+            <li>
+              • User-friendly: Clean UI, wallet-aware flows, explorer links,
+              faucet CTA.
+            </li>
+            <li>
+              • On-chain: All actions execute on-chain via JSON-RPC; no server
+              state.
+            </li>
           </ul>
         </div>
       </section>
