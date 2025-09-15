@@ -84,7 +84,7 @@ export default function Index() {
           </p>
           <ul className="mt-4 text-sm list-disc pl-5 space-y-2">
             <li>
-              Somnia Shannon Testnet Explorer:{" "}
+              Somnia Shannon Testnet Explorer: {" "}
               <a
                 className="underline"
                 href={SOMNIA_EXPLORER_URL}
@@ -92,6 +92,17 @@ export default function Index() {
                 rel="noreferrer"
               >
                 {SOMNIA_EXPLORER_URL}
+              </a>
+            </li>
+            <li>
+              <b>Example ERC-20 Contract:</b> <br />
+              <a
+                className="underline"
+                href="https://shannon-explorer.somnia.network/address/0x0042e377bFaE03fC5319ba0DdbC0c40cc4A47cd1?tab=contract_source_code"
+                target="_blank"
+                rel="noreferrer"
+              >
+                0x0042e377bFaE03fC5319ba0DdbC0c40cc4A47cd1
               </a>
             </li>
             <li>
