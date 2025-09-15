@@ -9,7 +9,7 @@ export default function Index() {
   return (
     <div className="">
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-grid-slate-100/5 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />
+        <div className="absolute inset-0 -z-10 [mask-image:radial-gradient(ellipse_at_center,black,transparent_70%)]" />
         <div className="absolute inset-0 -z-10 opacity-40" aria-hidden>
           <div className="pointer-events-none absolute -left-24 -top-24 h-64 w-64 rounded-full bg-gradient-to-br from-indigo-500/40 to-fuchsia-500/40 blur-3xl" />
           <div className="pointer-events-none absolute -right-24 -bottom-24 h-64 w-64 rounded-full bg-gradient-to-tr from-indigo-500/40 to-fuchsia-500/40 blur-3xl" />
