@@ -98,7 +98,7 @@ export default function ERC20Tools() {
           <div className="pt-2">
             <Button variant="outline" asChild>
               <a
-                href="https://shannon-explorer.somnia.network/"
+                href={require("@/lib/somnia").SOMNIA_EXPLORER_URL}
                 target="_blank"
                 rel="noreferrer"
               >
