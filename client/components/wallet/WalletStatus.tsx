@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { useAccount, useBalance, useConnect, useDisconnect, useSwitchChain } from "wagmi";
-import { InjectedConnector } from "wagmi/connectors/injected";
 import { somniaShannonTestnet } from "@/lib/somnia";
 import { useMemo } from "react";
 
@@ -9,10 +8,8 @@ function truncateAddress(addr: string) {
 }
 
 export function WalletStatus() {
-  const { address, chainId, isConnected, status } = useAccount();
-  const { connect, connectors, isPending: isConnecting } = useConnect({
-    connector: new InjectedConnector({ options: { shimDisconnect: true } }),
-  });
+  const { address, chainId, isConnected } = useAccount();
+  const { connect, connectors, isPending: isConnecting } = useConnect();
   const { disconnect } = useDisconnect();
   const { switchChain, isPending: isSwitching } = useSwitchChain();
   const { data: balance } = useBalance({
@@ -29,9 +26,10 @@ export function WalletStatus() {
   }, [isConnected, onSomnia, address]);
 
   if (!isConnected) {
+    const connector = connectors?.[0];
     return (
       <Button
-        onClick={() => connect()}
+        onClick={() => connector ? connect({ connector }) : undefined}
         variant="default"
         size="sm"
         aria-busy={isConnecting}
