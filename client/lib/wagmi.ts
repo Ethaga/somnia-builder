@@ -1,4 +1,5 @@
 import { http, createConfig } from "wagmi";
+import { injected } from "wagmi/connectors";
 import { QueryClient } from "@tanstack/react-query";
 import { somniaShannonTestnet } from "./somnia";
 
@@ -9,5 +10,6 @@ export const wagmiConfig = createConfig({
   transports: {
     [somniaShannonTestnet.id]: http(somniaShannonTestnet.rpcUrls.default.http[0]),
   },
+  connectors: [injected()],
   ssr: false,
 });
